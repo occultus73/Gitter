@@ -1,11 +1,12 @@
-package io.github.occultus73.gitter
+package io.github.occultus73.gitter.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.github.occultus73.gitter.R
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
     }
 }
