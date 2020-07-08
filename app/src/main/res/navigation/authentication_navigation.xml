@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/authentication_navigation.xml">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_navigation.xml"
+    app:startDestination="@id/loginFragment">
 
+    <include app:graph="@navigation/home_navigation" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="io.github.occultus73.gitter.ui.authentication.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/xml2"
+            app:destination="@id/home_navigation.xml" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="io.github.occultus73.gitter.ui.authentication.registration.RegistrationFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
