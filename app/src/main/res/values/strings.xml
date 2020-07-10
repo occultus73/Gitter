@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Gitter</string>
+
+    <string name="background_of_login_bottom">Background of login bottom</string>
+    <string name="enter_your_email">Email</string>
+    <string name="enter_your_password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="register">Don\'t have an account?<u> Click here </u></string>
+    <string name="enter_your_username">Username</string>
+    <string name="enter_your_address">Address</string>
+    <string name="reenter_your_password">Re-enter your password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already a member?<u> Click here </u></string>
+    <string name="enter_your_details">Enter your details</string>
 </resources>
