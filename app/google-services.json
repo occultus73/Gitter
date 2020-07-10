@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739804659054",
+    "firebase_url": "https://gitter-6b418.firebaseio.com",
+    "project_id": "gitter-6b418",
+    "storage_bucket": "gitter-6b418.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739804659054:android:f3c95bfdd336bec32d957f",
+        "android_client_info": {
+          "package_name": "io.github.occultus73.gitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739804659054-4hc35unklc5046qmht17nrm099e0g6pv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.occultus73.gitter",
+            "certificate_hash": "ec98b1160c2666dd96bec24e8526cde1b34b8a3b"
+          }
+        },
+        {
+          "client_id": "739804659054-4m0hbdqtljlupbe0u79r9nc9ionfd0kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoX1zPuAnO5Zg4Bq9HnpZi1Ru2DZiokvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739804659054-4m0hbdqtljlupbe0u79r9nc9ionfd0kc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
