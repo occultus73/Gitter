@@ -27,4 +27,15 @@
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="io.github.occultus73.gitter.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/xml"
+            app:destination="@id/home_navigation.xml" />
+    </fragment>
 </navigation>
