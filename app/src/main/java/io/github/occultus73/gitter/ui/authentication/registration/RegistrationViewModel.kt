@@ -62,9 +62,11 @@ class RegistrationViewModel(private val authRepository: AuthRepository) : ViewMo
                         authListner.onLoading()
                     }
                     is StateResponse.Success -> {
-                        state.data.user.sendEmailVerification()
-                        authListner.onSuccess()
-
+                        if(state.data.user.isEmailVerified) {
+                            authListner.onSuccess()
+                        } else {
+                            authListner.onFailure("Please verify email - link sent")
+                        }
                     }
                     is StateResponse.Failed -> {
                         authListner.onFailure(state.message)

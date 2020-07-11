@@ -12,14 +12,16 @@ import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.databinding.LoginFragmentBinding
 import io.github.occultus73.gitter.model.network.FirebaseHelper
 import io.github.occultus73.gitter.utils.AuthListner
+import io.github.occultus73.gitter.utils.CustomAlertDialog
 import kotlinx.android.synthetic.main.login_fragment.*
 
-class LoginFragment : Fragment(), AuthListner {
+class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick {
 
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding : LoginFragmentBinding
-    private var firebaseHelper =
-        FirebaseHelper()
+  
+    private var firebaseHelper = FirebaseHelper()
+    private lateinit var customAlertDialog : CustomAlertDialog
 
 
     override fun onCreateView(
@@ -35,6 +37,7 @@ class LoginFragment : Fragment(), AuthListner {
         binding.loginViewModel = viewModel
         binding.lifecycleOwner = this
         viewModel.authListner = this
+        customAlertDialog = CustomAlertDialog(this.requireContext(),this)
         goToSignUp()
 
     }
@@ -50,6 +53,7 @@ class LoginFragment : Fragment(), AuthListner {
     override fun onFailure(errorMessage: String) {
         progress_bar.visibility= View.GONE
         Toast.makeText(activity, errorMessage, Toast.LENGTH_SHORT).show()
+        customAlertDialog.CustomAlertDialog(errorMessage)
     }
 
     private fun goToSignUp() {
@@ -60,5 +64,14 @@ class LoginFragment : Fragment(), AuthListner {
             }
         } )
     }
+
+    override fun onSuccessClick() {
+      customAlertDialog.dismiss()
+    }
+
+    override fun onFailureClick() {
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegistrationFragment())
+    }
+
 
 }
