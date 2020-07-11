@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.R
-import io.github.occultus73.gitter.network.FirebaseHelper
+import io.github.occultus73.gitter.model.network.FirebaseHelper
 
 class SplashFragment : Fragment() {
 
-    private var firebaseHelper = FirebaseHelper()
+    private var firebaseHelper =
+        FirebaseHelper()
 
     override fun onCreateView(
         inflater: LayoutInflater,

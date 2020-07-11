@@ -1,7 +1,7 @@
 package io.github.occultus73.gitter.model
 
 import com.google.firebase.auth.AuthResult
-import io.github.occultus73.gitter.network.FirebaseHelper
+import io.github.occultus73.gitter.model.network.FirebaseHelper
 import io.github.occultus73.gitter.utils.StateResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch

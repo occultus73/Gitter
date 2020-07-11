@@ -9,9 +9,8 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import io.github.occultus73.gitter.R
 import io.github.occultus73.gitter.databinding.LoginFragmentBinding
-import io.github.occultus73.gitter.network.FirebaseHelper
+import io.github.occultus73.gitter.model.network.FirebaseHelper
 import io.github.occultus73.gitter.utils.AuthListner
 import kotlinx.android.synthetic.main.login_fragment.*
 
@@ -19,7 +18,8 @@ class LoginFragment : Fragment(), AuthListner {
 
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding : LoginFragmentBinding
-    private var firebaseHelper = FirebaseHelper()
+    private var firebaseHelper =
+        FirebaseHelper()
 
 
     override fun onCreateView(
