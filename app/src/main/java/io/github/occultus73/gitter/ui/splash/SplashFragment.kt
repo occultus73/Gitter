@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.R
-import io.github.occultus73.gitter.network.FirebaseHelper
+import io.github.occultus73.gitter.model.network.FirebaseHelper
 import kotlinx.android.synthetic.main.fragment_splash.*
 
 class SplashFragment : Fragment() {
