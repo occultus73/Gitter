@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/authentication_navigation.xml"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/splashFragment">
 
     <include app:graph="@navigation/home_navigation" />
     <fragment
@@ -13,10 +13,14 @@
         tools:layout="@layout/login_fragment" >
         <action
             android:id="@+id/action_loginFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/xml2"
-            app:destination="@id/home_navigation.xml" />
+            app:destination="@id/home_navigation.xml"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -25,7 +29,9 @@
         tools:layout="@layout/registration_fragment" >
         <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -33,9 +39,13 @@
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/xml"
-            app:destination="@id/home_navigation.xml" />
+            app:destination="@id/home_navigation.xml"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
     </fragment>
 </navigation>

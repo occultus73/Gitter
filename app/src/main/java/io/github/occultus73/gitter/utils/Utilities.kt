@@ -1,9 +1,13 @@
 package io.github.occultus73.gitter.utils
 
+import android.app.Dialog
 import android.content.Context
 import android.util.Patterns
+import android.view.Window
+import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
+import io.github.occultus73.gitter.R
 
 fun isLoginDataValid(email: String, password: String): Int {
     return if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) 0

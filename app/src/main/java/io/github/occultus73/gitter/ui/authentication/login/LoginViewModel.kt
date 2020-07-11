@@ -5,9 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.github.occultus73.gitter.network.FirebaseHelper
 import io.github.occultus73.gitter.ui.authentication.AuthRepository
-import io.github.occultus73.gitter.utils.AuthListner
-import io.github.occultus73.gitter.utils.StateResponse
-import io.github.occultus73.gitter.utils.isLoginDataValid
+import io.github.occultus73.gitter.utils.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -19,6 +17,7 @@ class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
     var password = MutableLiveData<String>()
     private val uiScope = CoroutineScope(Dispatchers.Main)
     private var _errorCode = MutableLiveData<Int>()
+
     lateinit var authListner : AuthListner
     val errorCode  : LiveData<Int>
           get() = _errorCode
@@ -68,8 +67,15 @@ class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
                         }
                      is StateResponse.Failed -> {
                          authListner.onFailure(state.message)
+
                      }
                 }
             }
     }
+
+//    override fun onOkClick() {
+//
+//    }
+
+
 }
