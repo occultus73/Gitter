@@ -49,7 +49,7 @@ class RegistrationFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButt
 
     override fun onSuccess() {
         progress_bar.visibility = View.GONE
-        startActivity(Intent(requireContext(), HomeActivity::class.java))
+        RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
     }
 
     override fun onFailure(errorMessage: String) {
