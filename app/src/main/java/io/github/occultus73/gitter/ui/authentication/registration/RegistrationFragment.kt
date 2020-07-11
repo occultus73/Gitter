@@ -1,5 +1,6 @@
 package io.github.occultus73.gitter.ui.authentication.registration
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.databinding.RegistrationFragmentBinding
 import io.github.occultus73.gitter.model.network.FirebaseHelper
+import io.github.occultus73.gitter.ui.home.HomeActivity
 import io.github.occultus73.gitter.utils.AuthListner
 import io.github.occultus73.gitter.utils.CustomAlertDialog
 import kotlinx.android.synthetic.main.registration_fragment.*
@@ -47,6 +49,7 @@ class RegistrationFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButt
 
     override fun onSuccess() {
         progress_bar.visibility = View.GONE
+        startActivity(Intent(requireContext(), HomeActivity::class.java))
     }
 
     override fun onFailure(errorMessage: String) {

@@ -1,5 +1,6 @@
 package io.github.occultus73.gitter.ui.authentication.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.databinding.LoginFragmentBinding
 import io.github.occultus73.gitter.model.network.FirebaseHelper
+import io.github.occultus73.gitter.ui.home.HomeActivity
 import io.github.occultus73.gitter.utils.AuthListner
 import io.github.occultus73.gitter.utils.CustomAlertDialog
 import kotlinx.android.synthetic.main.login_fragment.*
@@ -48,7 +50,7 @@ class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick
 
     override fun onSuccess() {
         progress_bar.visibility = View.GONE
-        LoginFragmentDirections.actionLoginFragmentToHomeActivity()
+        startActivity(Intent(requireContext(), HomeActivity::class.java))
     }
 
     override fun onFailure(errorMessage: String) {
