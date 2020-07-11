@@ -1,9 +1,6 @@
 package io.github.occultus73.gitter.model.data
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
+import androidx.room.*
 import com.google.gson.annotations.SerializedName
 
 
@@ -64,8 +61,8 @@ data class GithubRepository(
     var notifications_url: String?,
     var open_issues: Int?,
     var open_issues_count: Int?,
-//    @Ignore
-//    var owner: GithubOwner?,
+    @Embedded(prefix = "owner_")
+    var owner: GithubOwner?,
     @SerializedName("private")
     var isPrivate: Boolean?,
     var pulls_url: String?,

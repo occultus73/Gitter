@@ -1,6 +1,5 @@
 package io.github.occultus73.gitter.ui.authentication.registration
 
-import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-import io.github.occultus73.gitter.R
 import io.github.occultus73.gitter.databinding.RegistrationFragmentBinding
-import io.github.occultus73.gitter.network.FirebaseHelper
+import io.github.occultus73.gitter.model.network.FirebaseHelper
 import io.github.occultus73.gitter.utils.AuthListner
 import io.github.occultus73.gitter.utils.CustomAlertDialog
 import kotlinx.android.synthetic.main.registration_fragment.*

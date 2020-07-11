@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs"
-apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-kapt' 
 apply plugin: 'com.google.gms.google-services'
 
 
@@ -16,7 +16,9 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        
         multiDexEnabled true
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,7 +33,14 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    buildFeatures{dataBinding=true}
+
+    android {
+        buildFeatures{
+            dataBinding = true
+            // for view binding :
+            // viewBinding = true
+        }
+    }
 }
 
 dependencies {
@@ -79,5 +88,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
 
 }

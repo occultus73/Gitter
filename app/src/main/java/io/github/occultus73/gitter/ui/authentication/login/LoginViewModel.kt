@@ -6,6 +6,10 @@ import androidx.lifecycle.ViewModel
 import io.github.occultus73.gitter.network.FirebaseHelper
 import io.github.occultus73.gitter.ui.authentication.AuthRepository
 import io.github.occultus73.gitter.utils.*
+import io.github.occultus73.gitter.model.AuthRepository
+import io.github.occultus73.gitter.utils.AuthListner
+import io.github.occultus73.gitter.utils.StateResponse
+import io.github.occultus73.gitter.utils.isLoginDataValid
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
