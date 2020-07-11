@@ -3,8 +3,7 @@ package io.github.occultus73.gitter.ui.authentication.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import io.github.occultus73.gitter.network.FirebaseHelper
-import io.github.occultus73.gitter.ui.authentication.AuthRepository
+import io.github.occultus73.gitter.model.AuthRepository
 import io.github.occultus73.gitter.utils.AuthListner
 import io.github.occultus73.gitter.utils.StateResponse
 import io.github.occultus73.gitter.utils.isLoginDataValid

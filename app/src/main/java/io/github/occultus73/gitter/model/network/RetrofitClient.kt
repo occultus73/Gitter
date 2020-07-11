@@ -1,7 +1,6 @@
 package io.github.occultus73.gitter.model.network
 
 import androidx.lifecycle.LiveData
-import io.github.occultus73.gitter.model.Repository
 import io.github.occultus73.gitter.model.data.GithubRepository
 import io.github.occultus73.gitter.utils.Constants.BASE_URL
 import retrofit2.Retrofit
