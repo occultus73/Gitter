@@ -48,6 +48,7 @@ class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick
 
     override fun onSuccess() {
         progress_bar.visibility = View.GONE
+        LoginFragmentDirections.actionLoginFragmentToHomeActivity()
     }
 
     override fun onFailure(errorMessage: String) {
