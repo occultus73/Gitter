@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Gitter</string>
-
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_user">Enter Github Username</string>
+    <string name="add_user">Add user</string>
+    <string name="repository">Repository :</string>
+    <string name="search">Search</string>
+    <string name="users_list">Users</string>
+    <string name="commitCount">"Commits : "</string>
+    <string name="owner">Owner</string>
+    <string name="open_issues">"Open issues : "</string>
+    <string name="isPrivate">Private</string>
+    <string name="isPublic">Public</string>
     <string name="background_of_login_bottom">Background of login bottom</string>
     <string name="enter_your_email">Email</string>
     <string name="enter_your_password">Password</string>

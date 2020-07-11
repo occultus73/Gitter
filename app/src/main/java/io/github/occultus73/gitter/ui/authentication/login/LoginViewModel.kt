@@ -60,7 +60,7 @@ class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
                          authListner.onLoading()
                         }
                      is StateResponse.Success -> {
-                         if(state.data.user.isEmailVerified) {
+                         if(state.data.user!!.isEmailVerified) {
                          authListner.onSuccess()
                          } else {
                          authListner.onFailure("Please verify email - link sent")

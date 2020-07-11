@@ -1,13 +1,16 @@
-package io.github.occultus73.gitter.model.network
+package com.historymakers.gitter.data.network
 
 import androidx.lifecycle.LiveData
-import io.github.occultus73.gitter.model.data.GithubRepository
-import io.github.occultus73.gitter.utils.Constants.GET_REPOSITORIES
-import io.github.occultus73.gitter.utils.Constants.USER_NAME
+import com.historymakers.gitter.data.response.ReposItemResponse
+import com.historymakers.gitter.data.response.UserResponse
+import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface GithubService {
-    @GET(GET_REPOSITORIES)
-    fun getUserRepositories(@Path(USER_NAME) gitUserName: String): LiveData<List<GithubRepository>>
+    @GET("users/{username}")
+    fun getUserAsync(@Path("username") type:String): Deferred<UserResponse>
+
+    @GET("users/{username}/repos")
+    fun getReposByUser(@Path("username") type: String):Deferred<List<ReposItemResponse>>
 }

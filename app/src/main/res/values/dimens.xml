@@ -12,5 +12,11 @@
     <dimen name="textSize16">16sp</dimen>
     <dimen name="dimen40">40dp</dimen>
 
+    <dimen name="dimen4">4dp</dimen>
+    <dimen name="dimen0">0dp</dimen>
+    <dimen name="dimen84">84dp</dimen>
+    <dimen name="dimen24">24sp</dimen>
+    <dimen name="dimen20">20sp</dimen>
+
 
 </resources>

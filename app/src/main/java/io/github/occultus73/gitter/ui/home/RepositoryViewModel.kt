@@ -9,5 +9,4 @@ import io.github.occultus73.gitter.model.data.GithubRepository
 class RepositoryViewModel(application: Application) : AndroidViewModel(application) {
     private val dataRepository: DataRepository = DataRepository(application)
 
-    fun requestGithubUserRepos(user: String) = dataRepository.requestGithubUserRepos(user)
 }

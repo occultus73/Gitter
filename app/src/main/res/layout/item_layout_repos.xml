@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen16"
+    android:layout_marginStart="@dimen/dimen16"
+    android:layout_marginEnd="@dimen/dimen16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen16">
+
+
+        <TextView
+            android:id="@+id/repo_name_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgray"
+            android:textSize="@dimen/dimen20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="RepoName" />
+
+        <TextView
+            android:id="@+id/isPrivatePublic_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/isPrivate"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/repo_name_textView"/>
+
+        <TextView
+            android:id="@+id/repo_ownerLabel_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/owner"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/repo_name_textView"/>
+
+        <TextView
+            android:id="@+id/repo_ownerName_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen8"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@id/repo_ownerLabel_textView"
+            app:layout_constraintStart_toEndOf="@id/repo_ownerLabel_textView"
+            app:layout_constraintTop_toTopOf="@id/repo_ownerLabel_textView"
+            tools:text="Owner Name" />
+        <TextView
+            android:id="@+id/repo_commitLabel_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/commitCount"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/repo_ownerLabel_textView"/>
+
+        <TextView
+            android:id="@+id/repo_commitCount_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/dimen8"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@id/repo_commitLabel_textView"
+            app:layout_constraintStart_toEndOf="@id/repo_commitLabel_textView"
+            app:layout_constraintTop_toTopOf="@id/repo_commitLabel_textView"
+            tools:text="12" />
+
+        <TextView
+            android:id="@+id/open_issuesLabel_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/open_issues"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/repo_commitLabel_textView"/>
+
+        <TextView
+            android:id="@+id/open_issuesCount_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen8"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@id/open_issuesLabel_textView"
+            app:layout_constraintStart_toEndOf="@id/open_issuesLabel_textView"
+            app:layout_constraintTop_toTopOf="@id/open_issuesLabel_textView"
+            tools:text="12" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.historymakers.gitter.view.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen16"
+        tools:context=".view.home.search.SearchFragment">
+
+        <EditText
+            android:id="@+id/search_user_editText"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="@dimen/dimen48"
+            android:layout_margin="@dimen/dimen4"
+            android:background="@android:drawable/edit_text"
+            android:hint="@string/search_user"
+            android:paddingStart="@dimen/dimen16"
+            android:text="@={homeViewModel.searchUser}"
+            app:layout_constraintEnd_toStartOf="@id/search_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="@dimen/dimen48"
+            android:layout_height="@dimen/dimen0"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> homeViewModel.onSearchButtonClicked()}"
+            android:padding="@dimen/dimen4"
+            app:layout_constraintBottom_toBottomOf="@id/search_user_editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/search_user_editText"
+            app:layout_constraintTop_toTopOf="@id/search_user_editText"
+            app:srcCompat="@drawable/ic_search" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_details_container_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen16"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_user_editText">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen32"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circular_imageView"
+                    android:layout_width="@dimen/dimen84"
+                    android:layout_height="@dimen/dimen84"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/name_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkgray"
+                    android:layout_marginStart="@dimen/dimen32"
+                    android:textSize="@dimen/dimen24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/circular_imageView"
+                    app:layout_constraintTop_toTopOf="@id/circular_imageView"
+                    tools:text="Username" />
+
+                <TextView
+                    android:id="@+id/repo_label_textView"
+                    android:layout_width="0dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen32"
+                    android:layout_marginTop="@dimen/dimen16"
+                    android:text="@string/repository"
+                    app:layout_constraintStart_toEndOf="@id/circular_imageView"
+                    app:layout_constraintTop_toBottomOf="@id/name_textView" />
+
+                <TextView
+                    android:id="@+id/repo_number_textView"
+                    android:layout_width="0dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen8"
+                    app:layout_constraintBottom_toBottomOf="@id/repo_label_textView"
+                    app:layout_constraintStart_toEndOf="@id/repo_label_textView"
+                    app:layout_constraintTop_toTopOf="@id/repo_label_textView"
+                    tools:text="12" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_user_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/add_user"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:onClick="@{() -> homeViewModel.onAddButtonClicked()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
