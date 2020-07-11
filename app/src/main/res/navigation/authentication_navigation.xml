@@ -18,7 +18,7 @@
             app:exitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/xml2"
-            app:destination="@id/home_navigation.xml"
+            app:destination="@+id/home_navigation.xml"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"/>
     </fragment>

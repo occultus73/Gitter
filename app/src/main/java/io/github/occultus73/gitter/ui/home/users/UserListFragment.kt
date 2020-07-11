@@ -34,10 +34,10 @@ class UserListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val application = requireNotNull(this.activity).application
+        val application = requireNotNull(activity).application
         val dbDataSource = UserDatabase.getInstance(application).userDAO
         val homeViewModelFactory = HomeViewModelFactory(dbDataSource)
-        viewModel = ViewModelProvider(this, homeViewModelFactory).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity(), homeViewModelFactory).get(HomeViewModel::class.java)
         binding.homeViewModel = viewModel
         binding.lifecycleOwner = this
         userListAdapter = UserListAdapter(mutableListOf(), UserListAdapter.OnClickListener {

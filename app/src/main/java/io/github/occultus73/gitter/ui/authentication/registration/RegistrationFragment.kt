@@ -37,7 +37,7 @@ class RegistrationFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButt
         binding.signUpViewModel = viewModel
         binding.lifecycleOwner = this
         viewModel.authListner = this
-        customAlertDialog = CustomAlertDialog(this.requireActivity(),this)
+        customAlertDialog = CustomAlertDialog(requireActivity(),this)
         goToLogin()
     }
 
