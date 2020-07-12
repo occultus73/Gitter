@@ -25,4 +25,5 @@
     <string name="enter_your_details">Enter your details</string>
     <string name="logo_of_app">logo of app</string>
     <string name="ok">OK</string>
+    <string name="logout_message">Are you sure you want to log out drom the App</string>
 </resources>

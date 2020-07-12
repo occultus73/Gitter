@@ -1,4 +1,4 @@
-package io.github.occultus73.gitter.model
+package io.github.occultus73.gitter.ui.authentication
 
 import com.google.firebase.auth.AuthResult
 import io.github.occultus73.gitter.model.network.FirebaseHelper

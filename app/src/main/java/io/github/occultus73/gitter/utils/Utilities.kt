@@ -1,13 +1,10 @@
 package io.github.occultus73.gitter.utils
 
-import android.app.Dialog
 import android.content.Context
 import android.util.Patterns
-import android.view.Window
-import android.widget.TextView
+import android.view.View
 import android.widget.Toast
-import androidx.lifecycle.MutableLiveData
-import io.github.occultus73.gitter.R
+import com.google.android.material.snackbar.Snackbar
 
 fun isLoginDataValid(email: String, password: String): Int {
     return if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) 0
@@ -29,4 +26,10 @@ fun isSignUpDataValid(
 fun showToast(context: Context?, message: String) {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }
+
+fun makeSnackBar(context: Context, view: View, message: String) : Snackbar {
+    return Snackbar.make(view, message, Snackbar.LENGTH_LONG)
+}
+
+
 
