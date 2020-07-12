@@ -1,4 +1,4 @@
-package com.historymakers.gitter.view.home.userdetails
+package io.github.occultus73.ui.home.userdetails
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

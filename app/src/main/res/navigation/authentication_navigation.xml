@@ -17,8 +17,9 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"/>
         <action
-            android:id="@+id/xml"
+            android:id="@+id/action_loginFragment_to_home_navigation"
             app:destination="@id/home_navigation.xml" />
+
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -40,5 +41,8 @@
             app:destination="@id/loginFragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_splashFragment_to_home_navigation"
+            app:destination="@id/home_navigation.xml" />
     </fragment>
 </navigation>

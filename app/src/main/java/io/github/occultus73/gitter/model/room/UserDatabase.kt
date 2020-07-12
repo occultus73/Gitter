@@ -1,4 +1,4 @@
-package com.historymakers.gitter.data.db
+package io.github.occultus73.gitter.model.room
 
 import android.content.Context
 import androidx.room.Database

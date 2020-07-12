@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.R
 import io.github.occultus73.gitter.model.network.FirebaseHelper
+
 import kotlinx.android.synthetic.main.fragment_splash.*
 
 class SplashFragment : Fragment() {
@@ -35,7 +36,7 @@ class SplashFragment : Fragment() {
         Handler().postDelayed({
                if(firebaseHelper.firebaseAuth.currentUser?.uid != null &&
                        firebaseHelper.firebaseAuth.currentUser?.isEmailVerified == true)  {
-                   findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
+                   findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeNavigation())
                } else {
                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
                }

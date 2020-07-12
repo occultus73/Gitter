@@ -3,6 +3,7 @@ package io.github.occultus73.gitter.ui.authentication.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import io.github.occultus73.gitter.utils.*
 import io.github.occultus73.gitter.model.AuthRepository
 import io.github.occultus73.gitter.utils.AuthListner
 import io.github.occultus73.gitter.utils.StateResponse
@@ -60,7 +61,7 @@ class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
                          authListner.onLoading()
                         }
                      is StateResponse.Success -> {
-                         if(state.data.user!!.isEmailVerified) {
+                         if(state.data.user?.isEmailVerified!!) {
                          authListner.onSuccess()
                          } else {
                          authListner.onFailure("Please verify email - link sent")

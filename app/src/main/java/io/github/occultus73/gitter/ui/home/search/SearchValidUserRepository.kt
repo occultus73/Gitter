@@ -1,4 +1,4 @@
-package com.historymakers.gitter.view.home.search
+package io.github.occultus73.ui.home.search
 
 import android.util.Log
 import androidx.lifecycle.LiveData

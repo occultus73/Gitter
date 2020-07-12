@@ -1,4 +1,4 @@
-package com.historymakers.gitter.view.home.search
+package io.github.occultus73.ui.home.search
 
 import android.content.Context
 import android.os.Bundle
@@ -14,12 +14,15 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.historymakers.gitter.data.db.UserDatabase
-import com.historymakers.gitter.data.response.UserResponse
-import com.historymakers.gitter.view.home.HomeViewModel
-import com.historymakers.gitter.view.home.HomeViewModelFactory
+
+
 import io.github.occultus73.gitter.databinding.FragmentSearchBinding
+import io.github.occultus73.gitter.model.data.UserResponse
+import io.github.occultus73.gitter.model.room.UserDatabase
 import io.github.occultus73.gitter.utils.Constants.SEARCH_USER
+import io.github.occultus73.ui.home.HomeViewModel
+import io.github.occultus73.ui.home.HomeViewModelFactory
+import io.github.occultus73.ui.home.search.SearchFragmentDirections
 import kotlinx.android.synthetic.main.fragment_search.*
 
 
@@ -81,7 +84,7 @@ class SearchFragment : Fragment() {
     private fun bindUI(userResponse: UserResponse) {
         user_details_container_cardView.visibility = View.VISIBLE
         add_user_button.visibility = View.VISIBLE
-        activity?.let { Glide.with(it).load(userResponse.avatarUrl).into(circular_imageView) }
+        activity?.let {Glide.with(it).load(userResponse.avatarUrl).into(circular_imageView)}
         name_textView.text = userResponse.login
         repo_number_textView.text = userResponse.publicRepos.toString()
     }

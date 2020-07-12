@@ -1,11 +1,12 @@
-package com.historymakers.gitter.view.home.userdetails
+package io.github.occultus73.ui.home.userdetails
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.historymakers.gitter.data.response.ReposItemResponse
+
 import io.github.occultus73.gitter.R
+import io.github.occultus73.gitter.model.data.ReposItemResponse
 import kotlinx.android.synthetic.main.item_layout_repos.view.*
 
 class ReposListAdapterByUser(

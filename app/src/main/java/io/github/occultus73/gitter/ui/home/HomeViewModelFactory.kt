@@ -1,8 +1,9 @@
-package com.historymakers.gitter.view.home
+package io.github.occultus73.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.historymakers.gitter.data.db.UserDAO
+import io.github.occultus73.gitter.model.room.UserDAO
+
 
 @Suppress("UNCHECKED_CAST")
 class HomeViewModelFactory(private val userDAO: UserDAO) : ViewModelProvider.Factory {

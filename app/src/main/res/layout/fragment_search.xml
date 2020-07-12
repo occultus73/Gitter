@@ -6,14 +6,14 @@
     <data>
         <variable
             name="homeViewModel"
-            type="com.historymakers.gitter.view.home.HomeViewModel" />
+            type="io.github.occultus73.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/dimen16"
-        tools:context=".view.home.search.SearchFragment">
+        tools:context=".ui.home.search.SearchFragment">
 
         <EditText
             android:id="@+id/search_user_editText"
@@ -39,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/search_user_editText"
             app:layout_constraintTop_toTopOf="@id/search_user_editText"
-            app:srcCompat="@drawable/ic_search" />
+            android:src="@drawable/ic_search" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/user_details_container_cardView"

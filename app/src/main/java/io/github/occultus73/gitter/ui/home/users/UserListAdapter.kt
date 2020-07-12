@@ -1,12 +1,12 @@
-package com.historymakers.gitter.view.home.users
+package io.github.occultus73.ui.home.users
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.historymakers.gitter.data.db.User
 import io.github.occultus73.gitter.R
+import io.github.occultus73.gitter.model.room.User
 import kotlinx.android.synthetic.main.item_layout_users.view.*
 
 class UserListAdapter(

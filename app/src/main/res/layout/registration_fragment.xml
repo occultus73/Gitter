@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/launcher_bg">
 
 <!--        <ImageView-->
 <!--            android:id="@+id/imageView"-->
@@ -28,7 +29,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/background_of_login_bottom"
             android:scaleType="centerCrop"
-            android:src="@drawable/login_background" />
+            android:src="@drawable/signup_background" />
 
         <ProgressBar
             android:id="@+id/progress_bar"

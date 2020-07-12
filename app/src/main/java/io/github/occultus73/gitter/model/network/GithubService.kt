@@ -1,8 +1,8 @@
 package com.historymakers.gitter.data.network
 
 import androidx.lifecycle.LiveData
-import com.historymakers.gitter.data.response.ReposItemResponse
-import com.historymakers.gitter.data.response.UserResponse
+import io.github.occultus73.gitter.model.data.ReposItemResponse
+import io.github.occultus73.gitter.model.data.UserResponse
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path

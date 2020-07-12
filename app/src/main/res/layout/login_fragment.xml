@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/launcher_bg">
 
 
 <!--        <ImageView-->
@@ -30,13 +31,16 @@
         <ImageView
             android:id="@+id/bg_login"
             android:layout_width="0dp"
-            android:layout_height="@dimen/dimen360"
+            android:layout_height="@dimen/dimen400"
             android:contentDescription="@string/background_of_login_bottom"
             android:scaleType="fitStart"
+            android:layout_marginLeft="@dimen/dimen8"
+            android:layout_marginRight="@dimen/dimen8"
             android:src="@drawable/login_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <EditText
             android:id="@+id/email_editText"

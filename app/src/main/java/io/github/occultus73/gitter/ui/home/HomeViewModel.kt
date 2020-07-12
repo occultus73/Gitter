@@ -1,17 +1,18 @@
-package com.historymakers.gitter.view.home
+package io.github.occultus73.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.historymakers.gitter.data.db.Repo
-import com.historymakers.gitter.data.db.User
-import com.historymakers.gitter.data.db.UserDAO
-import com.historymakers.gitter.data.response.ReposItemResponse
-import com.historymakers.gitter.data.response.UserResponse
-import com.historymakers.gitter.view.home.search.SearchValidUserRepository
-import com.historymakers.gitter.view.home.search.SearchStatus
-import com.historymakers.gitter.view.home.userdetails.RepoByUserRepository
-import com.historymakers.gitter.view.home.userdetails.RepoLoadingStatus
+import io.github.occultus73.gitter.model.data.ReposItemResponse
+import io.github.occultus73.gitter.model.data.UserResponse
+import io.github.occultus73.gitter.model.room.Repo
+import io.github.occultus73.gitter.model.room.User
+import io.github.occultus73.gitter.model.room.UserDAO
+import io.github.occultus73.ui.home.search.SearchStatus
+import io.github.occultus73.ui.home.search.SearchValidUserRepository
+import io.github.occultus73.ui.home.userdetails.RepoByUserRepository
+import io.github.occultus73.ui.home.userdetails.RepoLoadingStatus
+
 import kotlinx.coroutines.*
 import java.lang.Exception
 import java.util.*

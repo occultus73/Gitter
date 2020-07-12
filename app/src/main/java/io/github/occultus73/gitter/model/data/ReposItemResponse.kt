@@ -1,4 +1,4 @@
-package com.historymakers.gitter.data.response
+package io.github.occultus73.gitter.model.data
 
 
 import androidx.room.Entity

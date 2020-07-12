@@ -1,4 +1,4 @@
-package com.historymakers.gitter.view.home.userdetails
+package io.github.occultus73.ui.home.userdetails
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,12 +9,13 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.historymakers.gitter.data.db.UserDatabase
-import com.historymakers.gitter.data.response.ReposItemResponse
-import com.historymakers.gitter.view.home.HomeViewModel
-import com.historymakers.gitter.view.home.HomeViewModelFactory
 import io.github.occultus73.gitter.databinding.FragmentUserDetailsBinding
+import io.github.occultus73.gitter.model.data.ReposItemResponse
+import io.github.occultus73.gitter.model.room.UserDatabase
 import io.github.occultus73.gitter.ui.home.HomeActivity
+import io.github.occultus73.ui.home.HomeViewModel
+import io.github.occultus73.ui.home.HomeViewModelFactory
+import io.github.occultus73.ui.home.userdetails.UserDetailsFragmentArgs
 import kotlinx.android.synthetic.main.fragment_user_details.*
 import java.util.*
 
