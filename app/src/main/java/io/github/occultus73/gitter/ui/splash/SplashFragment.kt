@@ -1,5 +1,6 @@
 package io.github.occultus73.gitter.ui.splash
 
+import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import io.github.occultus73.gitter.R
 import io.github.occultus73.gitter.model.network.FirebaseHelper
+import io.github.occultus73.gitter.ui.home.HomeActivity
 
 import kotlinx.android.synthetic.main.fragment_splash.*
 
@@ -36,7 +38,8 @@ class SplashFragment : Fragment() {
         Handler().postDelayed({
                if(firebaseHelper.firebaseAuth.currentUser?.uid != null &&
                        firebaseHelper.firebaseAuth.currentUser?.isEmailVerified == true)  {
-                   findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeNavigation())
+                   startActivity(Intent(requireContext(), HomeActivity::class.java))
+                   //findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeNavigation())
                } else {
                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
                }

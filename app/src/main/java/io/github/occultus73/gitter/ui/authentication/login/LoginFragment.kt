@@ -50,8 +50,8 @@ class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick
 
     override fun onSuccess() {
         progress_bar.visibility = View.GONE
-        //startActivity(Intent(requireContext(), HomeActivity::class.java))
-        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeNavigation())
+        startActivity(Intent(requireContext(), HomeActivity::class.java))
+        //findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeNavigation())
     }
 
     override fun onFailure(errorMessage: String) {
