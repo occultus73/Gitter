@@ -51,7 +51,6 @@ class UserListFragment : Fragment() {
                     UserListFragmentDirections.actionUserListFragmentToUserDetailsFragment()
                         .setUserName(it.name)
                 )
-
             }
         })
 

@@ -45,6 +45,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
 
     android {
@@ -133,6 +136,12 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$androidx_test"
     androidTestImplementation "androidx.test:core:$androidx_test"
     androidTestImplementation "androidx.test.ext:junit-ktx:$androidx_test"
+
+    // androidx.fragment
+    def fragment_version = "1.2.5"
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
+    debugImplementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.fragment:fragment:$fragment_version"
 
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_list">
 
     <data>
+
         <variable
             name="homeViewModel"
             type="io.github.occultus73.ui.home.HomeViewModel" />
@@ -17,7 +19,7 @@
             android:id="@+id/userList_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/dimen16"/>
+            android:paddingBottom="@dimen/dimen16" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
