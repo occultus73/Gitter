@@ -20,4 +20,7 @@ interface UserDAO {
 
     @Query("SELECT * FROM repo_table WHERE owner_name = :userName")
     fun getReposList(userName:String): List<Repo>
+
+    @Query("DELETE FROM user_table WHERE id = :userId")
+    fun deleteUserById(userId: Int)
 }
