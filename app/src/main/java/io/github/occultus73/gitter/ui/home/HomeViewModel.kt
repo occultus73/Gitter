@@ -41,8 +41,7 @@ class HomeViewModel(private val userDAO: UserDAO) : ViewModel() {
     lateinit var search: String
 
     private var _userAdded = MutableLiveData<Boolean>()
-    val userAdded: LiveData<Boolean>
-        get() = _userAdded
+    val userAdded: LiveData<Boolean> get() = _userAdded
 
     private var _repoListFromDB = MutableLiveData<List<Repo>>()
     val repoListFromDB : LiveData<List<Repo>>
@@ -133,6 +132,14 @@ class HomeViewModel(private val userDAO: UserDAO) : ViewModel() {
         }
 
     }
+
+    fun deleteUserById(userId: Int){
+        CoroutineScope(Dispatchers.IO).launch{
+            userDAO.deleteUserById(userId)
+        }
+
+    }
+
     private fun persistRepositoriesToDB(repo: Repo) {
         CoroutineScope(Dispatchers.Main).launch {
             withContext(Dispatchers.IO){
