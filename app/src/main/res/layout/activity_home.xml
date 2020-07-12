@@ -15,7 +15,18 @@
         android:elevation="@dimen/dimen4"
         app:titleTextColor="@color/colorPrimaryDark"
         android:theme="@style/ToolbarTheme"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/logout_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/dimen16"
+            android:src="@drawable/ic_logout"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <fragment
         android:id="@+id/host_fragment"
