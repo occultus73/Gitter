@@ -66,7 +66,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                 when (state) {
                     is StateResponse.Loading -> { }
                     is StateResponse.Success -> {
-                     startActivity(Intent(this, HomeActivity::class.java))
+                     startActivity(Intent(this, AuthenticationActivity::class.java))
                     }
                     is StateResponse.Failed -> { }
                 }
