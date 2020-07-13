@@ -10,11 +10,13 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import io.github.occultus73.gitter.R
 import io.github.occultus73.gitter.databinding.LoginFragmentBinding
 import io.github.occultus73.gitter.model.network.FirebaseHelper
 import io.github.occultus73.gitter.ui.home.HomeActivity
 import io.github.occultus73.gitter.utils.AuthListner
 import io.github.occultus73.gitter.utils.CustomAlertDialog
+import io.github.occultus73.gitter.utils.makeSnackBar
 import kotlinx.android.synthetic.main.login_fragment.*
 
 class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick {
@@ -41,7 +43,7 @@ class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick
         viewModel.authListner = this
         customAlertDialog = CustomAlertDialog(this.requireContext(),this)
         goToSignUp()
-
+        LoginValidation()
     }
 
     override fun onLoading() {
@@ -56,7 +58,7 @@ class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick
 
     override fun onFailure(errorMessage: String) {
         progress_bar.visibility= View.GONE
-        Toast.makeText(activity, errorMessage, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(activity, errorMessage, Toast.LENGTH_SHORT).show()
         customAlertDialog.CustomAlertDialog(errorMessage)
     }
 
@@ -67,6 +69,17 @@ class LoginFragment : Fragment(), AuthListner, CustomAlertDialog.OnOkButtonClick
                 viewModel.goToSignUpComplete()
             }
         } )
+    }
+
+    private fun LoginValidation() {
+        viewModel.errorCode.observe(viewLifecycleOwner, Observer { code ->
+            when (code) {
+                0 -> { makeSnackBar(this.requireContext(), this.requireView(),
+                       getString(R.string.invalid_user)).show()}
+                1 -> { makeSnackBar(this.requireContext(), this.requireView(),
+                       getString(R.string.invalid_user)).show()}
+            }
+        })
     }
 
     override fun onSuccessClick() {

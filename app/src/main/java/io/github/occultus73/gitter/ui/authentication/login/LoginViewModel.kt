@@ -74,9 +74,4 @@ class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
             }
     }
 
-//    override fun onOkClick() {
-//
-//    }
-
-
 }
