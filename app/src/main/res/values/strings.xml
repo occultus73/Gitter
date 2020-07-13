@@ -25,9 +25,5 @@
     <string name="enter_your_details">Enter your details</string>
     <string name="logo_of_app">logo of app</string>
     <string name="ok">OK</string>
-    <string name="logout_message">Are you sure you want to log out drom the App</string>
-    <string name="password_miss_match">Password and confirm password does not match</string>
-    <string name="password_minimum_characters">Password must be minimum of 8 charecters</string>
-    <string name="valid_email_check">Please provide valid email address</string>
-    <string name="invalid_user">Invalid Username or password</string>
+    <string name="logout_message">Are you sure you want to log out from the App</string>
 </resources>
