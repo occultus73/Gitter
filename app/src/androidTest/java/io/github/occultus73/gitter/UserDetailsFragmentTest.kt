@@ -20,6 +20,8 @@ class UserDetailsFragmentTest {
 
     @Test
     fun testUserDetailsFragment_inView() {
+        //does not support AppCompatActivity references in fragment.
+        //this is known issue: https://issuetracker.google.com/issues/121347222
         val fragmentScenario = launchFragmentInContainer<UserDetailsFragment>()
 
         onView(withId(R.id.user_details)).check(matches(ViewMatchers.isDisplayed()))

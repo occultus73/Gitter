@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,7 +37,7 @@ class UserDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         var username = arguments?.let { UserDetailsFragmentArgs.fromBundle(it).userName }
-        (activity as HomeActivity).supportActionBar?.title = username
+        (activity as AppCompatActivity).supportActionBar?.title = username
         val application = requireNotNull(this.activity).application
         val dbDataSource = UserDatabase.getInstance(application).userDAO
         val homeViewModelFactory = HomeViewModelFactory(dbDataSource)
