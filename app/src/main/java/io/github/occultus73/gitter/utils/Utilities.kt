@@ -4,7 +4,9 @@ import android.content.Context
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
+import io.github.occultus73.gitter.R
 
 fun isLoginDataValid(email: String, password: String): Int {
     return if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) 0
